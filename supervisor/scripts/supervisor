@@ -1,0 +1,8 @@
+#!/bin/sh
+
+status () {
+    echo "---> ${@}" >&2
+}
+
+status "Starting supervisor to keep container running"
+supervisord -c /etc/supervisor.conf 
