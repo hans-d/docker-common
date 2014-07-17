@@ -14,5 +14,5 @@ copy_template_if_not_present() {
 }
 
 update_template() {
-    sed "s$1{{$2}}$1\"$3\"$1g" -i $4
+    sed "s$1{{$2}}$1$3$1g" -i $4
 }
