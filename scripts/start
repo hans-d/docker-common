@@ -5,9 +5,11 @@
 status "Init container" 
 for f in /docker/scripts/init-*
 do
-    exec $f "${@}"
+    $f "${@}"
 done
+
+status "Starting..."
 for f in /docker/scripts/start-*
 do
-    exec $f "${@}"
+    $f "${@}"
 done
