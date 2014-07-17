@@ -1,0 +1,1 @@
+RUN chmod +x --recursive /etc/my_init.d/* /etc/service/*
