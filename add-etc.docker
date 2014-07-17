@@ -1,1 +1,1 @@
-ADD etc /docker/etc
+ADD etc /etc
