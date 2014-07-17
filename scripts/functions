@@ -1,0 +1,17 @@
+shopt -s nullglob
+
+status () {
+    echo "---> ${@}" >&2
+}
+
+copy_template_if_not_present() {
+    for f in /docker/templates/$1/*
+    do
+      filename="${f##*/}"
+      [ ! -f $2/$filename ] && cp $f $2/$filename
+    done
+}
+
+update_template() {
+    sed 's$1{{$2}}$1'"$3"'$1g' -i $4
+}

@@ -1,0 +1,2 @@
+ADD scripts /docker/scripts
+RUN chmod +x /docker/scripts/*

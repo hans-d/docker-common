@@ -1,0 +1,8 @@
+RUN apt-get -y install python-setuptools && \
+    easy_install supervisor
+
+RUN mkdir -p /var/log/supervisor
+RUN mkdir -p /etc/supervisor/conf.d
+
+ADD common/supervisor/supervisor.conf /etc/supervisor.conf
+ADD common/supervisor/scripts /docker/scripts
