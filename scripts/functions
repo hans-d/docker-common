@@ -10,8 +10,9 @@ copy_template_if_not_present() {
       filename="${f##*/}"
       [ ! -f $2/$filename ] && cp $f $2/$filename
     done
+    echo
 }
 
 update_template() {
-    sed 's$1{{$2}}$1'"$3"'$1g' -i $4
+    sed "s$1{{$2}}$1\"$3\"$1g" -i $4
 }
