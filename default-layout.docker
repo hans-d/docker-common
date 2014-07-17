@@ -1,2 +1,3 @@
-RUN mkdir -p /docker/scripts
-RUN mkdir -p /docker/templates
+RUN mkdir -p /docker/scripts && \
+    mkdir -p /docker/templates
+ADD common/scripts /docker/scripts
